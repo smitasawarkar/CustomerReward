@@ -1,0 +1,86 @@
+<app-home></app-home>
+<h1>Show All Transaction Details</h1>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSubmittransaction()">
+                <fieldset>
+                    <legend class="text-center">Valid information is required. <span class="req"><small>
+                                required *</small></span></legend>
+                                @if(!selectedTxn) {
+                                  <div class="form-group">
+                                    <label for="custId"><span class="req">* </span> Customer Id: <small>This will be your customer Id</small></label>
+                                    <input type="number" [(ngModel)]="transaction.customerId" name="customerId" id="custId" class="form-control" maxlength="28" placeholder="Enter your customerID..." />
+                                  </div>
+                                
+                              }@else{
+                                <div class="form-group">
+                                  <label for="ids"><span class="req">* </span> Id: <small>This will be your transaction Id</small></label>
+                                  <input type="number" name="id" id="ids" [ngModel]="selectedTxn.id"  class="form-control" maxlength="28" placeholder="Enter your transaction id..." />
+                                </div>
+                              }
+
+                    <div class="form-group">
+                        <label for="amounts"><span class="req">* </span> Amount: </label>
+                        <input class="form-control" type="number" [(ngModel)]="transaction.amount" name="amount" id="amounts" [ngModel]="selectedTxn?.amount" 
+                            placeholder="Enter Amount" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dates"><span class="req">* </span> Date : </label>
+                        <input class="form-control" type="text" [(ngModel)]="transaction.date" name="date" id="dates" [ngModel]="selectedTxn?.date"  
+                            placeholder="Enter Date" required />
+                        <div id="errLast"></div>
+                    </div>
+                    @if(!selectedTxn){  
+                      <div class="form-group">
+                      <button class="btn btn-success" type="submit" name="submit_reg">Add Transaction</button>
+                  </div>
+                }@else {
+                  <div class="form-group">
+                    <button class="btn btn-success" type="submit">Update Transaction</button>
+                </div>
+                }
+                    
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <button (click)="getAllTransactions()">Get All Transactions</button> -->
+@for(txns of allTransection; track txns){
+  <ul><li>
+    <b>ID: </b> {{txns.id}}
+    <b> Amount:</b> {{txns.amount}}
+     <b>Date:</b> {{txns.date}}<br><br>
+    <button (click)="delTransaction(txns.id)">Delete</button>
+    <button (click)="selectTransaction(txns.id)">Update</button>
+ </li>
+</ul>
+}
+<router-outlet/>
+
+
+
+
+
+    
+
+     
