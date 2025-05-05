@@ -5,10 +5,12 @@ import { TransactionService } from '../service/transaction.service';
 import { RewardPoints } from '../interface/RewardPoints';
 import { HomeComponent } from '../home/home.component';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { HeaderfooterComponent } from "../headerfooter/headerfooter.component";
 
 @Component({
   selector: 'app-reward-point',
-  imports: [FormsModule,CommonModule,ReactiveFormsModule,HomeComponent,RouterOutlet],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule, RouterOutlet, HeaderfooterComponent],
   templateUrl: './reward-point.component.html',
   styleUrl: './reward-point.component.css'
 })

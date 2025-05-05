@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { HomeComponent } from "../home/home.component";
 import { NavbarComponent } from "../navbar/navbar.component";
 import { HeaderfooterComponent } from "../headerfooter/headerfooter.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-login',
   imports: [HeaderfooterComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
-export class HomeComponent {
+export class LoginComponent {
 
 }

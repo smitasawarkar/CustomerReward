@@ -3,11 +3,11 @@ import { NavbarComponent } from "../navbar/navbar.component";
 import { HeaderfooterComponent } from "../headerfooter/headerfooter.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-forgot-password',
   imports: [HeaderfooterComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './forgot-password.component.html',
+  styleUrl: './forgot-password.component.css'
 })
-export class HomeComponent {
+export class ForgotPasswordComponent {
 
 }

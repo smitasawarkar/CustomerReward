@@ -6,11 +6,13 @@ import { Transaction } from '../interface/transaction';
 import { error, log } from 'console';
 import { HomeComponent } from '../home/home.component';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { HeaderfooterComponent } from "../headerfooter/headerfooter.component";
 
 
 @Component({
   selector: 'app-transaction',
-  imports: [FormsModule,CommonModule,ReactiveFormsModule,HomeComponent,RouterOutlet],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule, RouterOutlet, HeaderfooterComponent],
   templateUrl: './transaction.component.html',
   styleUrl: './transaction.component.css',
    standalone: true

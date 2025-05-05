@@ -1,0 +1,26 @@
+/* notfound.component.css */
+.notfound-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .notfound-container h1 {
+    font-size: 3em;
+    color: #ff0000;
+  }
+  
+  .notfound-container p {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  .notfound-container a {
+    font-size: 1.2em;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .notfound-container a:hover {
+    text-decoration: underline;
+  }
+  

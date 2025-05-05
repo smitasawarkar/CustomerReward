@@ -1,0 +1,22 @@
+nav{
+    display:flex;
+    justify-content:space-between;
+    height: 50px;
+    justify-content:flex-end;
+    width: 100%;
+    }
+    ul{
+        display: flex;
+        width: 700px;
+        list-style-type: none;
+        justify-content: space-between;
+    }
+    ul li a{
+        text-decoration:none;
+        color: aliceblue;
+        display: block;
+    }
+    .Active{
+        background-color: rgb(156, 114, 222);
+    }
+  

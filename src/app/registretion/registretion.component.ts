@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { TransactionService } from '../service/transaction.service';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { customer } from '../customer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { customer } from '../interface/customer';
+import { HeaderfooterComponent } from "../headerfooter/headerfooter.component";
+
 
 @Component({
   selector: 'app-registretion',
-  imports: [ReactiveFormsModule,FormsModule,RouterOutlet,HomeComponent],
+  imports: [ReactiveFormsModule, FormsModule, RouterOutlet, HeaderfooterComponent],
   templateUrl: './registretion.component.html',
   styleUrl: './registretion.component.css'
 })

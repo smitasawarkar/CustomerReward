@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { customer } from '../customer';
+import { customer } from '../interface/customer';
 import { Observable } from 'rxjs';
 import { Transaction } from '../interface/transaction';
 import { RewardPoints} from '../interface/RewardPoints';

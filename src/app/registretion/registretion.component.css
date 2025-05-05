@@ -1,5 +1,7 @@
 body {
     padding-top:50px;
+    margin: 8px;
+    display: block;
 }
 fieldset {
     border: thin solid #ccc; 
